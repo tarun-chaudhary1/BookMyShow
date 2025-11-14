@@ -31,7 +31,7 @@ public class BookingDto {
 
     private Double totalPrice;
 
-    private List<ShowSeatDto> showSeats;
+    private List<ShowSeatDto> seats;
 
     private PaymentDto payment;
 }

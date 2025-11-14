@@ -1,6 +1,7 @@
 package com.cfs.BookMyShow.model;
 
 
+import com.cfs.BookMyShow.dto.PaymentDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
