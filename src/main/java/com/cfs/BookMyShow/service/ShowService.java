@@ -28,7 +28,7 @@ public class ShowService {
     private ShowSeatRepository showSeatRepository;
 
 
-    public ShowDto crateShow(ShowDto showDto)
+    public ShowDto createShow(ShowDto showDto)
     {
         Show show= new Show();
 
