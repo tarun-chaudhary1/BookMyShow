@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Select Seats</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">BookMyShow</div>
+    <nav>
+      <a href="index.html">Movies</a>
+      <a href="booking.html">My Booking</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div id="show-info" class="show-info"></div>
+    <h2>Pick Seats</h2>
+    <div id="seat-map" class="seat-map"></div>
+
+    <div class="checkout">
+      <div>
+        <strong>Selected:</strong> <span id="selected-count">0</span> seats -
+        <strong>Amount:</strong> ₹<span id="selected-amount">0</span>
+      </div>
+      <div>
+        <select id="payment-method">
+          <option value="UPI">UPI</option>
+          <option value="CARD">CARD</option>
+        </select>
+        <button id="confirm" class="btn btn-primary">Confirm Booking</button>
+      </div>
+    </div>
+    <div id="message" class="message"></div>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      app.loadSeatPage();
+    });
+  </script>
+</body>
+</html>

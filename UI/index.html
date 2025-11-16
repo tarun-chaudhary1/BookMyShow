@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BookMyShow - Movies</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">BookMyShow</div>
+    <nav>
+      <a href="index.html">Movies</a>
+      <a href="booking.html">My Booking</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Now Showing</h1>
+    <div id="movies" class="grid"></div>
+  </main>
+
+  <template id="movie-card">
+    <div class="card">
+      <img class="poster" src="" alt="poster" />
+      <div class="card-body">
+        <h3 class="title"></h3>
+        <p class="meta"></p>
+        <p class="desc"></p>
+        <div class="card-actions">
+          <a class="btn btn-primary view">View</a>
+          <a class="btn btn-outline book">Book</a>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+  <script>
+    // load movies on index
+    document.addEventListener('DOMContentLoaded', () => {
+      app.loadMovies();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Movie Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">BookMyShow</div>
+    <nav>
+      <a href="index.html">Movies</a>
+      <a href="booking.html">My Booking</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div id="movie-detail" class="movie-detail"></div>
+    <h2>Shows</h2>
+    <div id="shows" class="grid"></div>
+  </main>
+
+  <template id="show-card">
+    <div class="card show-card">
+      <div>
+        <h4 class="time"></h4>
+        <p class="range"></p>
+      </div>
+      <div>
+        <a class="btn btn-primary book">Select Seats</a>
+      </div>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      app.loadMoviePage();
+    });
+  </script>
+</body>
+</html>
