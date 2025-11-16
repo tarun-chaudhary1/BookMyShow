@@ -7,18 +7,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
-
 @Entity
-@Table(name = "movies")
+@Table(name="movies")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class Movie {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
 
     @Column(nullable = false)
     private String title;
@@ -30,10 +27,6 @@ public class Movie {
     private String releaseDate;
     private String posterUrl;
 
-
     @OneToMany(mappedBy = "movie",cascade = CascadeType.ALL)
     private List<Show> shows;
-
-
-
 }
